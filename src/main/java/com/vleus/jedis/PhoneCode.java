@@ -71,6 +71,7 @@ public class PhoneCode {
         //验证码key
         String codeKey = "VerifyCode" + phone + ":code";
         String redisCode = jedis.get(codeKey);
+
         //做判断
         if (redisCode.equals(code)) {
             System.out.println("验证码验证成功");
